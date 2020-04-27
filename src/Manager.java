@@ -16,7 +16,7 @@ public class Manager {
     public void add() {
         System.out.print("So dien thoai moi* (10 so): ");
         String sdt = scanner.nextLine();
-        while (!sdt.matches("^[0-9]{10}") || sdt.isEmpty()) {
+        while (!sdt.matches("^[0-9]{10}") || sdt == "") {
             System.out.print("So dien thoai khong hop le! Vui long nhap lai: ");
             sdt = scanner.nextLine();
         }
@@ -24,10 +24,10 @@ public class Manager {
         String nhom = scanner.nextLine();
         System.out.print("Ho ten* : ");
         String hoten = scanner.nextLine();
-        while (hoten.isEmpty()) {
+        while (hoten == "") {
             System.out.print("Khong phu hop! Nhap lai: ");
         }
-        System.out.println("Gioi tinh* (nam/nu): ");
+        System.out.println("Gioi tinh (nam/nu): ");
         String gioitinh = scanner.nextLine();
         while (gioitinh.toLowerCase().equals("nam") || gioitinh.toLowerCase().equals("nu")) {
             System.out.print("Khong phu hop! Nhap lai (nam/nu): ");
